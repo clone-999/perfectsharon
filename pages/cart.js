@@ -1,6 +1,5 @@
 import { Box, Link, MenuItem, Rating, Select, Typography } from '@mui/material';
 import axios from 'axios';
-import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
@@ -76,9 +75,9 @@ export default function CartScreen() {
                     </Box>
                 ) : (
                     <>
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="shop__cart__table">
+                        <div className="row">
+                            <div className="col-lg-12">
+                                <div className="shop__cart__table">
                                     <table>
                                         <thead>
                                             <tr>
@@ -92,7 +91,7 @@ export default function CartScreen() {
                                         <tbody>
                                             {cartItems.map((item) => (
                                                 <tr>
-                                                    <td class="cart__product__item">
+                                                    <td className="cart__product__item">
                                                         <Image
                                                             src={item.image}
                                                             alt={item.name}
@@ -100,8 +99,8 @@ export default function CartScreen() {
                                                             height={100}
                                                             ></Image>
                                                     </td>
-                                                    <td class="cart__product__item">
-                                                        <div class="cart__product__item__title">
+                                                    <td className="cart__product__item">
+                                                        <div className="cart__product__item__title">
                                                             <NextLink href={`/product/${item.slug}`} passHref>
                                                                 <Link>
                                                                     <h6>{item.name}</h6>
@@ -110,9 +109,9 @@ export default function CartScreen() {
                                                             <Rating value={item.rating} readOnly></Rating>
                                                         </div>
                                                     </td>
-                                                    <td class="cart__price">${item.price}</td>
-                                                    <td class="cart__quantity">
-                                                        <div class="pro-qty">
+                                                    <td className="cart__price">${item.price}</td>
+                                                    <td className="cart__quantity">
+                                                        <div className="pro-qty">
                                                             <Select
                                                                 value={item.quantity}
                                                                 onChange={(e) =>
@@ -127,8 +126,8 @@ export default function CartScreen() {
                                                             </Select>
                                                         </div>
                                                     </td>
-                                                    <td class="cart__close">
-                                                        <span class="icon_close" 
+                                                    <td className="cart__close">
+                                                        <span className="icon_close" 
                                                             onClick={() => removeItemHandler(item)}>
                                                         </span>
                                                     </td>
@@ -140,19 +139,19 @@ export default function CartScreen() {
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="col-lg-6">
+                        <div className="row">
+                            <div className="col-lg-6">
                                 
                             </div>
-                            <div class="col-lg-4 offset-lg-2">
-                                <div class="cart__total__procced">
+                            <div className="col-lg-4 offset-lg-2">
+                                <div className="cart__total__procced">
                                     <h6>Cart total</h6>
                                     <ul>
                                         <li>Subtotal <span>({cartItems.reduce((a, c) => a + c.quantity, 0)}{' '}
                                         items) : ${' '}
                                         {cartItems.reduce((a, c) => a + c.quantity * c.price, 0)}</span></li>
                                     </ul>
-                                    <a href="#" class="primary-btn" 
+                                    <a href="#" className="primary-btn" 
                                         onClick={() => {
                                             router.push('/shipping');
                                         }}>Proceed to checkout
