@@ -1,4 +1,4 @@
-import { Button, Link, Rating } from '@mui/material';
+import { Link, Rating } from '@mui/material';
 import NextLink from 'next/link';
 import React from 'react';
 import { urlForThumbnail } from '../utils/image';

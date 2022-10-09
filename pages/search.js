@@ -185,20 +185,20 @@ function SearchScreen() {
                 </div>
             </div>
 
-            <section class="shop spad">
-                <div class="container">
-                    <div class="row">
+            <section className="shop spad">
+                <div className="container">
+                    <div className="row">
                         
-                        <div class="col-lg-3 col-md-3">
-                            <div class="shop__sidebar">
-                                <div class="sidebar__categories">
-                                    <div class="section-title">
+                        <div className="col-lg-3 col-md-3">
+                            <div className="shop__sidebar">
+                                <div className="sidebar__categories">
+                                    <div className="section-title">
                                         <h4>Categories</h4>
                                     </div>
-                                    <div class="categories__accordion">
-                                        <div class="accordion" id="accordionExample">
-                                            <div class="card">
-                                                <div class="card-heading active">
+                                    <div className="categories__accordion">
+                                        <div className="accordion" id="accordionExample">
+                                            <div className="card">
+                                                <div className="card-heading active">
                                                     <Box sx={classes.fullWidth}>
                                                         <Select fullWidth value={category} onChange={categoryHandler}>
                                                         <MenuItem value="all">All</MenuItem>
@@ -216,11 +216,11 @@ function SearchScreen() {
                                     </div>
                                 </div>
 
-                                <div class="sidebar__filter">
-                                    <div class="section-title">
+                                <div className="sidebar__filter">
+                                    <div className="section-title">
                                         <h4>Prices</h4>
                                     </div>
-                                    <div class="filter-range-wrap">
+                                    <div className="filter-range-wrap">
                                         <Box sx={classes.fullWidth}>
                                             <Select value={price} onChange={priceHandler} fullWidth>
                                             <MenuItem value="all">All</MenuItem>
@@ -234,8 +234,8 @@ function SearchScreen() {
                                     </div>
                                 </div>
 
-                                <div class="sidebar__sizes">
-                                    <div class="section-title">
+                                <div className="sidebar__sizes">
+                                    <div className="section-title">
                                         <h4>Ratings</h4>
                                     </div>
                                     <Box sx={classes.fullWidth}>
@@ -254,9 +254,9 @@ function SearchScreen() {
                             </div>
                         </div>
 
-                        <div class="col-lg-9 col-md-9">
+                        <div className="col-lg-9 col-md-9">
                             <div className='row'>
-                                <div class="col-lg-9 col-md-9">
+                                <div className="col-lg-9 col-md-9">
                                     <Grid item>
                                         {products && products.length !== 0 ? products.length : 'No'}{' '}
                                         Results
@@ -270,7 +270,7 @@ function SearchScreen() {
                                         ) : null}
                                     </Grid>
                                 </div>
-                                <div class="col-lg-3 col-md-3">
+                                <div className="col-lg-3 col-md-3">
                                     <Grid item>
                                         <Typography component="span" sx={classes.sort}>
                                             Sort by
@@ -285,7 +285,7 @@ function SearchScreen() {
                                 </div>
                             </div>
                             <br />
-                            <div class="row">
+                            <div className="row">
                             {loading ? (
                                 <CircularProgress />
                                 ) : error ? (
@@ -293,7 +293,7 @@ function SearchScreen() {
                                 ) : (
                                     <>
                                         {products.map((product) => (
-                                            <div class="col-lg-4 col-md-6" key={product.name}>
+                                            <div className="col-lg-4 col-md-6" key={product.name}>
                                                 <ProductItem
                                                   product={product}
                                                   addToCartHandler={addToCartHandler}

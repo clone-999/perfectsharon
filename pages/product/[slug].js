@@ -3,7 +3,6 @@ import NextLink from 'next/link';
 import { useContext, useEffect, useState } from 'react';
 import { useSnackbar } from 'notistack';
 import Layout from '../../components/Layout';
-import classes from '../../utils/classes';
 import client from '../../utils/client';
 import { urlFor, urlForThumbnail } from '../../utils/image';
 import { Store } from '../../utils/Store';
@@ -102,7 +101,7 @@ export default function ProductScreen(props) {
         <Alert variant="error">{error}</Alert>
       ) : (
       <section className="product-details spad">
-        <div class="container">
+        <div className="container">
           <div className="row">
             <div className="col-lg-6">
               <div className="product__details__pic">
