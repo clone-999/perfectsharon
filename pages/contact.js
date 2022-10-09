@@ -52,7 +52,7 @@ const ContactScreen = () => {
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.1195537224826!2d55.15410701448232!3d25.097814041885574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6b4164e9f477%3A0x873c65b1c9eb0f7e!2sConcord%20Tower%20-%20Al%20Sufouh%20-%20Al%20Sufouh%202%20-%20Dubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sbd!4v1663154069360!5m2!1sen!2sbd" 
                             height="580" 
                             style={{border: 0}}
-                            allowfullscreen="">
+                            allowFullScreen>
                             </iframe>
                             
                         </div>

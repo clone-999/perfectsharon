@@ -53,7 +53,7 @@ export default function CartScreen() {
                             <div className="breadcrumb__links">
                                 <NextLink href="/" passHref>
                                     <Link>
-                                    <i className="fa fa-home"></i> Home
+                                        <i className="fa fa-home"></i>Home
                                     </Link>
                                 </NextLink>
                                 <span>Shopping Cart</span>
@@ -91,7 +91,7 @@ export default function CartScreen() {
                                         <tbody>
                                             {cartItems.map((item) => (
                                                 <tr>
-                                                    <td className="cart__product__item">
+                                                    <td key={item.slug} className="cart__product__item">
                                                         <Image
                                                             src={item.image}
                                                             alt={item.name}

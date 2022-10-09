@@ -5,8 +5,6 @@ import {
     Button,
     CircularProgress,
     Grid,
-    List,
-    ListItem,
     MenuItem,
     Rating,
     Select,

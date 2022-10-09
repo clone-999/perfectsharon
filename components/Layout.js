@@ -64,7 +64,7 @@ export default function Layout({ title, description, children }) {
         },
         },
     });
-    
+
     const [anchorEl, setAnchorEl] = useState(null);
     const loginMenuCloseHandler = (e, redirect) => {
         if (redirect && redirect == "backdropClick"){
@@ -90,20 +90,13 @@ export default function Layout({ title, description, children }) {
     };
 
     const [sidbarVisible, setSidebarVisible] = useState(false);
-    const [menubarVisible, setMenubarVisible] = useState(false);
+    const [setMenubarVisible] = useState(false);
 
     const sidebarOpenHandler = () => {
         setSidebarVisible(true);
     };
     const sidebarCloseHandler = () => {
         setSidebarVisible(false);
-    };
-
-    const menubarOpenHandler = () => {
-        setMenubarVisible(true);
-    };
-    const menubarCloseHandler = () => {
-        setMenubarVisible(false);
     };
 
     const { enqueueSnackbar } = useSnackbar();
