@@ -90,7 +90,6 @@ export default function Layout({ title, description, children }) {
     };
 
     const [sidbarVisible, setSidebarVisible] = useState(false);
-    const [setMenubarVisible] = useState(false);
 
     const sidebarOpenHandler = () => {
         setSidebarVisible(true);

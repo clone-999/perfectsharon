@@ -149,7 +149,7 @@ export default function ProductScreen(props) {
                   <li>
                     <span>Availability:</span>
                     <div className="stock__checkbox">
-                        <label for="stockin">
+                        <label htmlFor="stockin">
                           {product.countInStock > 0
                             ? 'In stock'
                             : 'Unavailable'}
@@ -159,7 +159,7 @@ export default function ProductScreen(props) {
                   <li>
                     <span>Category:</span>
                     <div className="stock__checkbox">
-                      <label for="stockin">
+                      <label htmlFor="stockin">
                         {product.category}
                       </label>
                     </div>

@@ -22,7 +22,7 @@ export default function CartScreen() {
     const updateCartHandler = async (item, quantity) => {
         const { data } = await axios.get(`/api/products/${item._id}`);
         if (data.countInStock < quantity) {
-        enqueueSnackbar('Sorry. Product is out of stock', { variant: 'error' });
+            enqueueSnackbar('Sorry. Product is out of stock', { variant: 'error' });
         return;
         }
         dispatch({
@@ -62,8 +62,8 @@ export default function CartScreen() {
                     </div>
                 </div>
             </div>
-            <section class="shop-cart spad">
-                <div class="container">
+            <section className="shop-cart spad">
+                <div className="container">
                 {cartItems.length === 0 ? (
                     <Box>
                         <Typography>
@@ -90,8 +90,8 @@ export default function CartScreen() {
                                         </thead>
                                         <tbody>
                                             {cartItems.map((item) => (
-                                                <tr>
-                                                    <td key={item.slug} className="cart__product__item">
+                                                <tr key={item.slug}>
+                                                    <td className="cart__product__item">
                                                         <Image
                                                             src={item.image}
                                                             alt={item.name}
